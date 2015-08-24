@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6677D4BA1B885D04005BC729 /* CreatePlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6677D4B91B885D04005BC729 /* CreatePlanViewController.swift */; };
 		6677D4BE1B8867FD005BC729 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6677D4BD1B8867FD005BC729 /* TextCell.swift */; };
+		6677D4C01B8AD14A005BC729 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6677D4BF1B8AD14A005BC729 /* LabelCell.swift */; };
+		6677D4C21B8AD23B005BC729 /* CreatePlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6677D4C11B8AD23B005BC729 /* CreatePlanViewController.swift */; };
+		6677D4C41B8AD8EC005BC729 /* DatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6677D4C31B8AD8EC005BC729 /* DatePickerCell.swift */; };
 		66EB9AB81B0986900080AE16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EB9AB71B0986900080AE16 /* AppDelegate.swift */; };
 		66EB9ABD1B0986900080AE16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66EB9ABB1B0986900080AE16 /* Main.storyboard */; };
 		66EB9ABF1B0986900080AE16 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66EB9ABE1B0986900080AE16 /* Images.xcassets */; };
@@ -58,8 +60,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6677D4B91B885D04005BC729 /* CreatePlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePlanViewController.swift; sourceTree = "<group>"; };
 		6677D4BD1B8867FD005BC729 /* TextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
+		6677D4BF1B8AD14A005BC729 /* LabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
+		6677D4C11B8AD23B005BC729 /* CreatePlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePlanViewController.swift; sourceTree = "<group>"; };
+		6677D4C31B8AD8EC005BC729 /* DatePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerCell.swift; sourceTree = "<group>"; };
 		66EB9AB21B0986900080AE16 /* Progress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Progress.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EB9AB61B0986900080AE16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66EB9AB71B0986900080AE16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,8 +150,10 @@
 			children = (
 				66EB9ABB1B0986900080AE16 /* Main.storyboard */,
 				66EC00FA1B87D13600146FF9 /* MainViewController.swift */,
-				6677D4B91B885D04005BC729 /* CreatePlanViewController.swift */,
+				6677D4C11B8AD23B005BC729 /* CreatePlanViewController.swift */,
+				6677D4BF1B8AD14A005BC729 /* LabelCell.swift */,
 				6677D4BD1B8867FD005BC729 /* TextCell.swift */,
+				6677D4C31B8AD8EC005BC729 /* DatePickerCell.swift */,
 				66EC00D21B87C8C600146FF9 /* YLProgressBar */,
 				66EB9AB51B0986900080AE16 /* Supporting Files */,
 				66EC00B71B85AFB200146FF9 /* TaskList.swift */,
@@ -316,14 +322,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6677D4BA1B885D04005BC729 /* CreatePlanViewController.swift in Sources */,
 				66EC00B61B85A88300146FF9 /* AbstractTask.swift in Sources */,
+				6677D4C21B8AD23B005BC729 /* CreatePlanViewController.swift in Sources */,
 				66EC00D11B87C87900146FF9 /* YLProgressBar.m in Sources */,
 				66EC00B81B85AFB200146FF9 /* TaskList.swift in Sources */,
 				66EC00FB1B87D13600146FF9 /* MainViewController.swift in Sources */,
 				66EC00B41B85A65300146FF9 /* CounterTask.swift in Sources */,
 				6677D4BE1B8867FD005BC729 /* TextCell.swift in Sources */,
+				6677D4C01B8AD14A005BC729 /* LabelCell.swift in Sources */,
 				66EB9AB81B0986900080AE16 /* AppDelegate.swift in Sources */,
+				6677D4C41B8AD8EC005BC729 /* DatePickerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

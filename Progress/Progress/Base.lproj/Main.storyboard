@@ -95,8 +95,8 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ADj-vh-e0J">
-                                                    <rect key="frame" x="566" y="10" width="26" height="30"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ADj-vh-e0J">
+                                                    <rect key="frame" x="128" y="10" width="464" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -104,6 +104,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="centerY" secondItem="ADj-vh-e0J" secondAttribute="centerY" id="9Jr-a8-t92"/>
                                                 <constraint firstAttribute="centerY" secondItem="yZB-qR-OOj" secondAttribute="centerY" id="CKw-qH-pQk"/>
+                                                <constraint firstItem="ADj-vh-e0J" firstAttribute="leading" secondItem="yZB-qR-OOj" secondAttribute="trailing" constant="50" id="SqH-Ys-f25"/>
                                                 <constraint firstItem="yZB-qR-OOj" firstAttribute="leading" secondItem="yMz-8k-Sj0" secondAttribute="leadingMargin" constant="10" id="V3l-o0-DLs"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="ADj-vh-e0J" secondAttribute="trailing" id="shE-dg-Szj"/>
                                             </constraints>
@@ -113,7 +114,7 @@
                                             <outlet property="textField" destination="ADj-vh-e0J" id="NXo-lw-g2i"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="celllabel" rowHeight="50" id="QFn-WU-suh">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="celllabel" rowHeight="50" id="QFn-WU-suh" customClass="LabelCell" customModule="Progress" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QFn-WU-suh" id="X2s-fc-54C">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -128,8 +129,8 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEJ-9x-qmt">
-                                                    <rect key="frame" x="550" y="14" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEJ-9x-qmt">
+                                                    <rect key="frame" x="79" y="14" width="513" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -140,8 +141,34 @@
                                                 <constraint firstAttribute="centerY" secondItem="h4l-m0-ZII" secondAttribute="centerY" id="7s1-v7-L6L"/>
                                                 <constraint firstAttribute="centerY" secondItem="DEJ-9x-qmt" secondAttribute="centerY" id="KMv-Mz-ULm"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="DEJ-9x-qmt" secondAttribute="trailing" id="YM5-VE-hln"/>
+                                                <constraint firstItem="DEJ-9x-qmt" firstAttribute="leading" secondItem="h4l-m0-ZII" secondAttribute="trailing" id="bPi-8Z-QC9"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="h4l-m0-ZII" id="Te2-6K-PTr"/>
+                                            <outlet property="timeLabel" destination="DEJ-9x-qmt" id="w1H-gw-KbF"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellpicker" rowHeight="162" id="mVa-oG-j4q" customClass="DatePickerCell" customModule="Progress" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mVa-oG-j4q" id="rw2-KB-KrI">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fhA-wT-QEU">
+                                                    <rect key="frame" x="140" y="0.0" width="320" height="162"/>
+                                                    <date key="date" timeIntervalSinceReferenceDate="462084106.84303898">
+                                                        <!--2015-08-24 04:41:46 +0000-->
+                                                    </date>
+                                                </datePicker>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="fhA-wT-QEU" secondAttribute="centerY" constant="-0.5" id="3kT-i9-mKl"/>
+                                                <constraint firstAttribute="centerX" secondItem="fhA-wT-QEU" secondAttribute="centerX" id="q9K-fH-7qP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="datePicker" destination="fhA-wT-QEU" id="Rbc-Uf-MjZ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -163,6 +190,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="v0R-9C-Xsm">
                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="clickSave:" destination="ZYJ-u7-NUp" id="Mga-ah-YDQ"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

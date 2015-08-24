@@ -8,12 +8,36 @@
 
 import UIKit
 
-class TextCell: UITableViewCell {
+protocol TextCellDelegate{
+    func getTextInput(type: Type,input: String)
+}
+
+enum Type{
+    case Title
+    case Amount
+}
+
+class TextCell: UITableViewCell, UITextFieldDelegate {
 
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textField: UITextField!
+    var delegate: TextCellDelegate?
+    var title: String?{
+        didSet{
+        label.text = title
+        if title == "Title"{
+            type = Type.Title
+            }
+        if title == "Amount"{
+            type = Type.Amount
+            }
+        }
+    }
+    var type: Type?
+        
     override func awakeFromNib() {
         super.awakeFromNib()
+        textField.delegate = self
         // Initialization code
     }
 
@@ -22,5 +46,16 @@ class TextCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        if let type = type {
+            delegate?.getTextInput(type,input: textField.text)
+        }
+    }
+    
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        endEditing(true)
+        return true
+    }
 }
